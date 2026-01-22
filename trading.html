@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eecd2b",
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#181711",
+                        "whatsapp": "#25D366"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Manrope", sans-serif;
+        }
+        .candlestick-overlay {
+            background-image: linear-gradient(0deg, rgba(24, 23, 17, 0.95) 0%, rgba(24, 23, 17, 0.8) 100%), url(https://lh3.googleusercontent.com/aida-public/AB6AXuDOfzwu13EvXmpkgYw7UPuPR-u0S8Io7HRYIumF3oZYr0X7Q76gi09ABoAmfIQflX6iOxdhPH5M4Z1sIOir6RWUt13MHftM8eTQhXlk1-W-q__Qfa37F00SDAhPKamaDufdhOOUFyL89L2gmEOXMmxAQj0HjNecw92yVnqVcSKeXlVLMgd7Y-BikGCrZXYvT9f9pV6T337H_vqb8F6Dl07jDzIR7o1Qkx2EERFt-LYdNoJ3toJ12bV7lIiPubKra9ps4-917jHVUWA);
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-white font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 bg-background-dark/80 backdrop-blur-md px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Mex Trade Bot</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-white/80 hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Beneficios</a>
+<a class="text-white/80 hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Robot</a>
+<a class="text-white/80 hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Seguridad</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+<span class="truncate">Regístrate en XM</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center">
+<div class="w-full candlestick-overlay py-20 px-4" data-alt="Japanese candlestick trading chart with dark overlay">
+<div class="max-w-[960px] mx-auto flex flex-col items-center text-center">
+<h1 class="text-white tracking-light text-[42px] font-black leading-tight @[480px]:text-5xl mb-4">
+                        Términos y Condiciones
+                    </h1>
+<p class="text-primary text-lg font-bold tracking-widest uppercase">
+                        Mex Trade Bot x XM Partners
+                    </p>
+</div>
+</div>
+<div class="max-w-[960px] w-full px-4 -mt-10 mb-20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-8 border border-white/10 bg-[#27251c] shadow-2xl">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary">card_giftcard</span>
+<p class="text-white/70 text-base font-medium">Reembolso Garantizado</p>
+</div>
+<p class="text-white tracking-light text-3xl font-bold leading-tight">$750 MXN</p>
+<p class="text-sm text-white/50">Al abrir tu cuenta en XM para el torneo de golf.</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-8 border border-white/10 bg-[#27251c] shadow-2xl">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+<p class="text-white/70 text-base font-medium">Bono XM Partners</p>
+</div>
+<p class="text-white tracking-light text-3xl font-bold leading-tight">100% hasta $500 USD</p>
+<p class="text-sm text-white/50">Exclusivo para nuevos registros mediante Mex Trade Bot.</p>
+</div>
+</div>
+<div class="bg-[#1f1d14] rounded-xl border border-white/5 p-8 md:p-12 flex flex-col gap-10">
+<section class="flex flex-col gap-4">
+<h2 class="text-2xl font-bold text-white border-l-4 border-primary pl-4">Automatización Inteligente</h2>
+<p class="text-white/70 text-base leading-relaxed">
+                            Conecta tu cuenta al robot de Swing Trading de <strong>Mex Trade Bot</strong>. Nuestra tecnología está diseñada para generar beneficios de manera automática mientras disfrutas del torneo de golf en Club Balvanera. La integración es directa y segura a través de los servidores de XM.
+                        </p>
+</section>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+<div class="flex flex-col gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">smart_toy</span>
+<h3 class="font-bold text-white">Conexión Directa</h3>
+<p class="text-sm text-white/50">Sincronización instantánea con el algoritmo de trading.</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+<h3 class="font-bold text-white">Seguridad XM</h3>
+<p class="text-sm text-white/50">Operaciones bajo certificaciones internacionales.</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+<h3 class="font-bold text-white">Control de Retiros</h3>
+<p class="text-sm text-white/50">Tú mantienes el control total de tus fondos y ganancias.</p>
+</div>
+</div>
+<section class="space-y-6 pt-6 border-t border-white/10">
+<div>
+<h3 class="text-lg font-bold text-primary mb-3">Validez y Permanencia</h3>
+<ul class="space-y-3 text-sm text-white/70 list-disc pl-5">
+<li>El bono de bienvenida es válido por un período de un mes natural desde el depósito inicial.</li>
+<li>Los fondos del bono no son retirables; únicamente las ganancias generadas a partir de ellos.</li>
+<li>Se recomienda una permanencia mínima de <strong>4 meses</strong> en el sistema de Swing Trading para maximizar las probabilidades de rentabilidad estadística.</li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-bold text-primary mb-3">Privacidad y Datos</h3>
+<p class="text-sm text-white/70 leading-relaxed">
+                                Los datos proporcionados durante el registro se utilizarán exclusivamente para la gestión de depósitos, validación de reembolsos y la conexión técnica con el robot de trading. Mex Trade Bot cumple con estándares estrictos de protección de datos.
+                            </p>
+</div>
+<div class="bg-black/20 p-6 rounded-lg border border-white/5">
+<h3 class="text-sm font-bold text-white/40 uppercase tracking-widest mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">warning</span> Exención de Responsabilidad
+                            </h3>
+<p class="text-xs text-white/40 leading-relaxed italic">
+                                El trading de instrumentos financieros conlleva riesgos significativos. Mex Trade Bot, XM Partners, Mex Trade Golf y Club Balvanera no garantizan retornos específicos. Los resultados pasados no aseguran rendimientos futuros. El usuario acepta la responsabilidad total sobre su capital invertido.
+                            </p>
+</div>
+</section>
+<div class="flex flex-col items-center gap-6 py-6 bg-primary/5 rounded-xl border border-primary/20">
+<div class="text-center px-4">
+<h2 class="text-xl font-bold text-white mb-2">¿Listo para comenzar?</h2>
+<p class="text-white/60 text-sm">Abre tu cuenta hoy y reclama tu reembolso de $750 MXN.</p>
+</div>
+<button class="flex min-w-[240px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary text-background-dark text-base font-bold tracking-[0.015em] hover:scale-105 transition-transform">
+<span class="truncate">Regístrate en XM ahora</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-white/10 py-10 px-10 bg-background-dark">
+<div class="max-w-[960px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white/30">monitoring</span>
+<span class="text-white/30 text-sm">© 2024 Mex Trade Bot. Todos los derechos reservados.</span>
+</div>
+<div class="flex gap-6">
+<a class="text-white/30 hover:text-white text-xs" href="#">Aviso Legal</a>
+<a class="text-white/30 hover:text-white text-xs" href="#">Cookies</a>
+<a class="text-white/30 hover:text-white text-xs" href="#">Soporte</a>
+</div>
+</div>
+</footer>
+<a class="fixed bottom-6 right-6 z-[60] group flex items-center gap-3" href="https://wa.me/524421851478" target="_blank">
+<span class="bg-background-dark/80 backdrop-blur-sm text-white text-xs font-bold py-2 px-4 rounded-lg border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity shadow-2xl">
+                ¿Necesitas ayuda?
+            </span>
+<div class="size-14 bg-whatsapp rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-95">
+<svg fill="white" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.003 21.003c-1.63 0-3.172-.423-4.516-1.168l-4.487 1.177 1.197-4.378a8.971 8.971 0 0 1-1.201-4.636c0-4.962 4.038-9 9-9s9 4.038 9 9-4.038 9-9 9zm0-16.5c-4.135 0-7.5 3.365-7.5 7.5 0 1.545.474 2.98 1.285 4.167l-.761 2.783 2.852-.747A7.464 7.464 0 0 0 12.003 19.5c4.136 0 7.5-3.364 7.5-7.5s-3.364-7.5-7.5-7.5zm4.495 10.334c-.195-.1-1.156-.57-1.334-.635-.178-.065-.308-.1-.438.1-.13.2-.504.635-.618.764-.114.13-.228.146-.423.048-.195-.1-1.171-.43-1.85-.98-.528-.427-.884-.954-.988-1.13-.104-.178-.011-.274.086-.372.088-.088.195-.228.292-.341.098-.114.13-.195.195-.325.065-.13.033-.244-.016-.341-.05-.098-.438-1.056-.601-1.446-.159-.38-.321-.328-.438-.334l-.374-.007c-.13 0-.341.048-.52.244-.179.195-.683.667-.683 1.626s.699 1.886.797 2.016c.098.13 1.374 2.098 3.33 2.942.465.2.828.32 1.111.41.467.148.893.127 1.229.077.375-.056 1.156-.471 1.319-.926.162-.455.162-.845.113-.926-.048-.08-.178-.13-.373-.23z"></path>
+</svg>
+</div>
+</a>
+</div>
+
+</body></html>
