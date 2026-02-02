@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Torneo de Golf MTB</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#17cf17",
+                        "gold": "#d4af37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112111",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Lexend', sans-serif; }
+        .gold-accent { color: #d4af37; }
+        .border-gold { border-color: #d4af37; }
+        .bg-gold { background-color: #d4af37; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111811] dark:text-white antialiased">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <!-- Top Navigation -->
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#dce5dc] dark:border-white/10 px-6 py-4 bg-white dark:bg-background-dark sticky top-0 z-50">
+            <div class="flex items-center gap-4 text-primary">
+                <div class="size-6">
+                    <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h2 class="text-[#111811] dark:text-white text-lg font-bold leading-tight tracking-tight">Torneo de Golf MTB</h2>
+            </div>
+            <div class="flex items-center gap-8">
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Inicio</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Bases</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Soporte</a>
+                </nav>
+                <button class="bg-primary text-[#111811] rounded-lg px-5 py-2 text-sm font-bold hover:opacity-90 transition-opacity">
+                    Mi Cuenta
+                </button>
+            </div>
+        </header>
+
+        <main class="flex-1 max-w-5xl mx-auto w-full px-6 py-10">
+            <!-- Page Heading -->
+            <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-5xl font-black leading-tight tracking-tight mb-4">Regístrate Ahora</h1>
+                    <p class="text-[#638863] dark:text-primary/70 text-lg">Sigue los pasos para asegurar tu lugar en el torneo más exclusivo del año. Vive la experiencia MTB.</p>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex items-center gap-2 bg-gold/10 text-gold px-4 py-2 rounded-full border border-gold/20">
+                        <span class="material-symbols-outlined text-sm">workspace_premium</span>
+                        <span class="text-xs font-bold uppercase tracking-wider">Edición 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Timeline - MODIFICADO CON 5 PASOS -->
+            <div class="bg-white dark:bg-white/5 p-8 rounded-xl shadow-sm border border-[#dce5dc] dark:border-white/10 mb-16">
+                <h3 class="text-xl font-bold mb-6">Pasos para Completar tu Inscripción</h3>
+                <div class="space-y-6">
+                    <!-- Paso 1 -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="size-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                                1
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-bold mb-2">Regístrate en XM y deposita $1,000 MXN</p>
+                            <p class="text-sm text-[#638863] dark:text-primary/70">
+                                Deposita $1,000 MXN como parte de tu inscripción, serán descontados de la misma. 
+                                Usa este código de Partner <span class="font-bold text-primary">HDY28</span> y recibe inmediatamente el doble de tu depósito de inscripción listos para tradear.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Paso 2 -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="size-10 rounded-full bg-background-light dark:bg-white/10 flex items-center justify-center text-[#638863] font-bold border-2 border-[#dce5dc] dark:border-white/10">
+                                2
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-bold mb-2">Regresa a llenar el formulario</p>
+                            <p class="text-sm text-[#638863] dark:text-primary/70">
+                                Cuando tengas tu usuario y hayas realizado el depósito, regresa a esta página de "Inscríbete" a llenar el formulario.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Paso 3 -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="size-10 rounded-full bg-background-light dark:bg-white/10 flex items-center justify-center text-[#638863] font-bold border-2 border-[#dce5dc] dark:border-white/10">
+                                3
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-bold mb-2">Llena el formulario</p>
+                            <p class="text-sm text-[#638863] dark:text-primary/70">
+                                Completa todos los campos del formulario de inscripción con tu información.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Paso 4 -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="size-10 rounded-full bg-background-light dark:bg-white/10 flex items-center justify-center text-[#638863] font-bold border-2 border-[#dce5dc] dark:border-white/10">
+                                4
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-bold mb-2">Deposita el resto de tu inscripción ($2,800 MXN)</p>
+                            <p class="text-sm text-[#638863] dark:text-primary/70">
+                                Haz tu depósito por el resto del monto de inscripción $2,800 en el link de Inscríbete y regresa a esta página de "Inscríbete". Envía tu comprobante de pago y tu Nombre.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Paso 5 -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="size-10 rounded-full bg-background-light dark:bg-white/10 flex items-center justify-center text-[#638863] font-bold border-2 border-[#dce5dc] dark:border-white/10">
+                                5
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-bold mb-2">¿Te inscribiste en el club?</p>
+                            <p class="text-sm text-[#638863] dark:text-primary/70">
+                                Si te inscribiste en el club, solo llena el formulario y manda tu comprobante de inscripción. Nos pondremos en contacto contigo para conectar el robot y empieces a ganar con Mex Trade Bot.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 1: Form -->
+            <section class="mb-24" id="step-1">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="h-8 w-1 bg-primary rounded-full"></div>
+                    <h2 class="text-2xl font-bold">Información de Contacto</h2>
+                </div>
+                <div class="bg-white dark:bg-white/5 p-8 rounded-xl border border-[#dce5dc] dark:border-white/10 max-w-2xl">
+                    <div class="grid grid-cols-1 gap-6">
+                        <label class="flex flex-col gap-2">
+                            <span class="text-sm font-bold">Nombre Completo</span>
+                            <input class="rounded-lg border-[#dce5dc] dark:border-white/10 dark:bg-background-dark focus:ring-primary focus:border-primary h-12" placeholder="Ej. Juan Pérez" type="text">
+                        </label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <label class="flex flex-col gap-2">
+                                <span class="text-sm font-bold">WhatsApp</span>
+                                <input class="rounded-lg border-[#dce5dc] dark:border-white/10 dark:bg-background-dark focus:ring-primary focus:border-primary h-12" placeholder="+52 000 000 0000" type="tel">
+                            </label>
+                            <label class="flex flex-col gap-2">
+                                <span class="text-sm font-bold">Correo Electrónico</span>
+                                <input class="rounded-lg border-[#dce5dc] dark:border-white/10 dark:bg-background-dark focus:ring-primary focus:border-primary h-12" placeholder="juan@ejemplo.com" type="email">
+                            </label>
+                        </div>
+                        <div class="pt-4">
+                            <a class="inline-flex items-center justify-center bg-primary text-black font-bold h-12 px-8 rounded-lg hover:opacity-90 transition-all w-full md:w-auto" href="#step-2">
+                                Siguiente Paso
+                                <span class="material-symbols-outlined ml-2">arrow_downward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Packages -->
+            <section class="mb-24 scroll-mt-24" id="step-2">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="h-8 w-1 bg-primary rounded-full"></div>
+                    <h2 class="text-2xl font-bold">Selecciona tu Paquete de Inscripción</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Package 1 -->
+                    <div class="bg-white dark:bg-white/5 p-8 rounded-xl border border-[#dce5dc] dark:border-white/10 flex flex-col hover:border-primary transition-all group">
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="text-xl font-bold">Individual Player</h3>
+                            <span class="text-2xl font-black text-primary">$2,500 <span class="text-xs text-gray-400">MXN</span></span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-1">
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary">check_circle</span> Green fee 18 hoyos
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary">check_circle</span> Kit de bienvenida Premium
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary">check_circle</span> Comida de premiación
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-[#638863]">
+                                <span class="material-symbols-outlined">radio_button_unchecked</span> Bebidas ilimitadas no incluidas
+                            </li>
+                        </ul>
+                        <a class="bg-[#111811] dark:bg-white dark:text-black text-white text-center py-3 rounded-lg font-bold hover:bg-primary hover:text-black transition-all" href="https://link.mercadopago.com.mx/torneodegolfmtb" target="_blank">
+                            Seleccionar Paquete
+                        </a>
+                    </div>
+
+                    <!-- Package 2 - Gold/Featured -->
+                    <div class="bg-white dark:bg-white/5 p-8 rounded-xl border-2 border-gold relative flex flex-col hover:shadow-xl transition-all">
+                        <div class="absolute -top-4 right-8 bg-gold text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">Recomendado</div>
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="text-xl font-bold">Foursome Pack</h3>
+                            <span class="text-2xl font-black text-gold">$8,500 <span class="text-xs text-gray-400">MXN</span></span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-1">
+                            <li class="flex items-center gap-3 text-sm font-semibold">
+                                <span class="material-symbols-outlined text-gold">star</span> Inscripción para 4 jugadores
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-gold">check_circle</span> Kit VIP para todos
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-gold">check_circle</span> Carrito de golf incluido
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-gold">check_circle</span> Bebidas ilimitadas en campo
+                            </li>
+                        </ul>
+                        <a class="bg-gold text-white text-center py-3 rounded-lg font-bold hover:bg-gold/90 transition-all" href="https://link.mercadopago.com.mx/torneodegolfmtb" target="_blank">
+                            Inscribir Foursome
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Payment & Partner -->
+            <section class="mb-24" id="step-3">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="h-8 w-1 bg-primary rounded-full"></div>
+                    <h2 class="text-2xl font-bold">Pago Seguro y Activación XM</h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                    <!-- Trust Box -->
+                    <div class="bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-800 p-8 rounded-xl flex flex-col justify-center">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="bg-white p-2 rounded-lg shadow-sm">
+                                <img alt="Mercado Pago" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYde9PRrNyean3FpI2ktuPJgV0lpyOffiriWSmXcNjuxi2J-Pchdc1pVEs85E_0ldrmsL0hpkrKcFVFUYSLjU-CmiMbeJcDRxVC0OGMVaDq6pUl8IPscJIWI0NWnWLOuLFhdtmrUkKyggj4TPEKR4EhEmhD8zzy1ot_hH5YnQbw6_gBNimwjBSiNg_ZokLLT3kVp4KS3sOKis1VmNpTTgfmUn3z9gkABi5nvkj00Mn2WIl8WDMCuDBYFdRLyKpVkriNllZ58JDv58">
+                            </div>
+                            <div>
+                                <p class="text-blue-900 dark:text-blue-200 font-bold text-lg">Pago 100% Protegido</p>
+                                <p class="text-blue-700 dark:text-blue-300 text-sm">Transacción cifrada via Mercado Pago</p>
+                            </div>
+                        </div>
+                        <p class="text-blue-800 dark:text-blue-200/70 text-sm leading-relaxed mb-4">
+                            Al completar tu pago, recibirás un comprobante digital en tu correo. Una vez liquidado tu lugar, el siguiente paso es la activación de tu bono a través de nuestro patrocinador XM.
+                        </p>
+                        <div class="flex items-center gap-2 text-blue-900 dark:text-blue-200 font-bold">
+                            <span class="material-symbols-outlined">security</span>
+                            <span class="text-xs uppercase tracking-tighter">Estándar PCI-DSS Nivel 1</span>
+                        </div>
+                    </div>
+
+                    <!-- XM Partner CTA -->
+                    <div class="bg-[#111811] text-white p-8 rounded-xl border border-white/10 flex flex-col justify-center relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-3xl rounded-full -mr-16 -mt-16"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-2 mb-4 text-primary font-black italic tracking-widest text-3xl">XM</div>
+                            <h3 class="text-2xl font-bold mb-4 leading-tight">Activa tu Bono de Patrocinio</h3>
+                            <p class="text-white/60 text-sm mb-8 leading-relaxed">
+                                Como requisito indispensable para la validación de tu hándicap y premios, debes registrarte en la plataforma de nuestro socio oficial XM.
+                            </p>
+                            <a class="inline-flex items-center justify-center bg-white text-black font-black h-14 px-10 rounded-lg hover:bg-primary transition-all w-full md:w-auto uppercase tracking-tighter" href="#">
+                                Regístrate en XM Ahora
+                                <span class="material-symbols-outlined ml-2">open_in_new</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Help -->
+            <div class="border-t border-[#dce5dc] dark:border-white/10 pt-10 text-center">
+                <p class="text-[#638863] text-sm mb-4">¿Tienes dudas con tu proceso de inscripción?</p>
+                <div class="flex justify-center gap-6">
+                    <a class="flex items-center gap-2 text-sm font-bold hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined text-lg">chat</span> Soporte vía WhatsApp
+                    </a>
+                    <a class="flex items-center gap-2 text-sm font-bold hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined text-lg">mail</span> soporte@torneomtb.mx
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Simple decorative background elements -->
+        <div class="fixed top-20 left-[-10%] w-[30%] h-[30%] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-[-1]"></div>
+        <div class="fixed bottom-10 right-[-10%] w-[40%] h-[40%] bg-gold/5 rounded-full blur-[120px] pointer-events-none z-[-1]"></div>
+    </div>
+</body>
+</html>
