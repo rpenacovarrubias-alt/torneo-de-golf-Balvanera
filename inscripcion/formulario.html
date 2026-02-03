@@ -74,9 +74,6 @@
         input:checked + .toggle-slider:before {
             transform: translateX(26px);
         }
-        .btn-premium {
-            @apply transition-all duration-500 ease-in-out hover:bg-gold hover:text-white hover:shadow-xl hover:shadow-gold/30 hover:scale-105 active:scale-95;
-        }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-[#111811] dark:text-white antialiased">
@@ -84,9 +81,10 @@
         <!-- Top Navigation -->
         <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#dce5dc] dark:border-white/10 px-6 py-4 bg-white dark:bg-background-dark sticky top-0 z-50">
             <div class="flex items-center gap-4 text-primary">
-                <!-- CAMBIO 1: Imagen del logo en lugar de SVG - Reemplaza "ruta/a/tu/logo.png" con el path de tu logo -->
                 <div class="size-6">
-                    <img src="ruta/a/tu/logo.png" alt="Logo Torneo Golf" class="w-full h-full object-contain">
+                    <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path>
+                    </svg>
                 </div>
                 <h2 class="text-[#111811] dark:text-white text-lg font-bold leading-tight tracking-tight">Torneo de Golf Balvanera MTB</h2>
             </div>
@@ -242,6 +240,114 @@
                 </div>
             </div>
 
+            <!-- Section 2: Packages -->
+            <section class="mb-24 scroll-mt-24" id="step-2">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="h-8 w-1 bg-primary rounded-full"></div>
+                    <h2 class="text-2xl font-bold">Selecciona tu Paquete de Inscripción</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Package 1 -->
+                    <div class="bg-white dark:bg-white/5 p-8 rounded-xl border border-[#dce5dc] dark:border-white/10 flex flex-col hover:border-primary transition-all group">
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="text-xl font-bold">Individual Player</h3>
+                            <span class="text-2xl font-black text-primary">$2,500 <span class="text-xs text-gray-400">MXN</span></span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-1">
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary">check_circle</span> Green fee 18 hoyos
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary">check_circle</span> Kit de bienvenida Premium
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary">check_circle</span> Comida de premiación
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-[#638863]">
+                                <span class="material-symbols-outlined">radio_button_unchecked</span> Bebidas ilimitadas no incluidas
+                            </li>
+                        </ul>
+                        <a class="bg-[#111811] dark:bg-white dark:text-black text-white text-center py-3 rounded-lg font-bold hover:bg-primary hover:text-black transition-all" 
+                           href="https://link.mercadopago.com.mx/torneodegolfmtb" target="_blank">
+                            Seleccionar Paquete
+                        </a>
+                    </div>
+
+                    <!-- Package 2 - Gold/Featured -->
+                    <div class="bg-white dark:bg-white/5 p-8 rounded-xl border-2 border-gold relative flex flex-col hover:shadow-xl transition-all">
+                        <div class="absolute -top-4 right-8 bg-gold text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">Recomendado</div>
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="text-xl font-bold">Foursome Pack</h3>
+                            <span class="text-2xl font-black text-gold">$8,500 <span class="text-xs text-gray-400">MXN</span></span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-1">
+                            <li class="flex items-center gap-3 text-sm font-semibold">
+                                <span class="material-symbols-outlined text-gold">star</span> Inscripción para 4 jugadores
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-gold">check_circle</span> Kit VIP para todos
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-gold">check_circle</span> Carrito de golf incluido
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-gold">check_circle</span> Bebidas ilimitadas en campo
+                            </li>
+                        </ul>
+                        <a class="bg-gold text-white text-center py-3 rounded-lg font-bold hover:bg-gold/90 transition-all" 
+                           href="https://link.mercadopago.com.mx/torneodegolfmtb" target="_blank">
+                            Inscribir Foursome
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Payment & Partner -->
+            <section class="mb-24" id="step-3">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="h-8 w-1 bg-primary rounded-full"></div>
+                    <h2 class="text-2xl font-bold">Pago Seguro y Activación XM</h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                    <!-- Trust Box -->
+                    <div class="bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-800 p-8 rounded-xl flex flex-col justify-center">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="bg-white p-2 rounded-lg shadow-sm">
+                                <img alt="Mercado Pago" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYde9PRrNyean3FpI2ktuPJgV0lpyOffiriWSmXcNjuxi2J-Pchdc1pVEs85E_0ldrmsL0hpkrKcFVFUYSLjU-CmiMbeJcDRxVC0OGMVaDq6pUl8IPscJIWI0NWnWLOuLFhdtmrUkKyggj4TPEKR4EhEmhD8zzy1ot_hH5YnQbw6_gBNimwjBSiNg_ZokLLT3kVp4KS3sOKis1VmNpTTgfmUn3z9gkABi5nvkj00Mn2WIl8WDMCuDBYFdRLyKpVkriNllZ58JDv58">
+                            </div>
+                            <div>
+                                <p class="text-blue-900 dark:text-blue-200 font-bold text-lg">Pago 100% Protegido</p>
+                                <p class="text-blue-700 dark:text-blue-300 text-sm">Transacción cifrada vía Mercado Pago</p>
+                            </div>
+                        </div>
+                        <p class="text-blue-800 dark:text-blue-200/70 text-sm leading-relaxed mb-4">
+                            Al completar tu pago, recibirás un comprobante digital en tu correo. Una vez liquidado tu lugar, el siguiente paso es la activación de tu bono a través de nuestro patrocinador XM.
+                        </p>
+                        <div class="flex items-center gap-2 text-blue-900 dark:text-blue-200 font-bold">
+                            <span class="material-symbols-outlined">security</span>
+                            <span class="text-xs uppercase tracking-tighter">Estándar PCI-DSS Nivel 1</span>
+                        </div>
+                    </div>
+
+                    <!-- XM Partner CTA -->
+                    <div class="bg-[#111811] text-white p-8 rounded-xl border border-white/10 flex flex-col justify-center relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-3xl rounded-full -mr-16 -mt-16"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-2 mb-4 text-primary font-black italic tracking-widest text-3xl">XM</div>
+                            <h3 class="text-2xl font-bold mb-4 leading-tight">Activa tu Bono de Patrocinio</h3>
+                            <p class="text-white/60 text-sm mb-8 leading-relaxed">
+                                Como requisito indispensable para la validación de tu hándicap y premios, debes registrarte en la plataforma de nuestro socio oficial XM.
+                            </p>
+                            <a class="inline-flex items-center justify-center bg-white text-black font-black h-14 px-10 rounded-lg hover:bg-primary transition-all w-full md:w-auto uppercase tracking-tighter" 
+                               href="https://affs.click/g75n5" target="_blank" rel="noopener noreferrer">
+                                Regístrate en XM Ahora
+                                <span class="material-symbols-outlined ml-2">open_in_new</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Footer Help -->
             <div class="border-t border-[#dce5dc] dark:border-white/10 pt-10 text-center">
                 <p class="text-[#638863] text-sm mb-4">¿Tienes dudas con tu proceso de inscripción?</p>
@@ -250,61 +356,11 @@
                         <span class="material-symbols-outlined text-lg">chat</span> Soporte vía WhatsApp
                     </a>
                     <a class="flex items-center gap-2 text-sm font-bold hover:text-primary transition-colors" href="#">
-                        <span class="material-symbols-outlined text-lg">mail</span> <span class="__cf_email__" data-cfemail="d3a0bca3bca1a7b693a7bca1bdb6bcbea7b1fdbeab">[email&#160;protected]</span>
+                        <span class="material-symbols-outlined text-lg">mail</span> soporte@torneomtb.mx
                     </a>
                 </div>
             </div>
         </main>
-
-        <!-- CAMBIO 2: Footer copiado del index.html -->
-        <footer class="bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-900 py-20 px-4 md:px-10">
-            <div class="max-w-[1400px] mx-auto grid md:grid-cols-4 gap-12">
-                <div class="col-span-2">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="size-10">
-                            <img src="Images/Logo_MTB.png" alt="MexTradeBot Logo" class="w-full h-full object-contain"/>
-                        </div>
-                        <h2 class="text-2xl font-black font-display italic">Pro Golf Tour</h2>
-                    </div>
-                    <p class="text-zinc-500 dark:text-zinc-400 text-base max-w-sm leading-relaxed">
-                        El evento de golf más importante de la temporada, fusionando la maestría deportiva con las herramientas financieras más avanzadas del mercado.
-                    </p>
-                    <div class="flex gap-4 mt-8 text-zinc-400">
-                        <a class="hover:text-primary transition-colors" href="https://www.google.com/maps/place/Balvanera+Polo+Golf+%26+Country+Club/@20.540511,-100.4722259,17z/data=!3m1!4b1!4m6!3m5!1s0x85d34f7fb62e0e5d:0x5bcbd089a2916658!8m2!3d20.540511!4d-100.469651!16s%2Fg%2F1tdlc1vw?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" title="Ubicación del Torneo"><span class="material-symbols-outlined">location_on</span></a>
-                        <a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-                        <a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-                        <a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-black text-lg mb-6 uppercase tracking-widest">Navegación</h4>
-                    <ul class="text-sm space-y-3 font-medium">
-                        <li><a class="text-zinc-500 hover:text-gold transition-colors" href="../index.html">Inicio</a></li>
-                        <li><a class="text-zinc-500 hover:text-gold transition-colors" href="../index.html#cronograma">Cronograma</a></li>
-                        <li><a class="text-zinc-500 hover:text-gold transition-colors" href="../index.html#patrocinadores">Patrocinadores</a></li>
-                        <li><a class="text-zinc-500 hover:text-gold transition-colors" href="../index.html#premios">Premios</a></li>
-                        <li><a class="text-zinc-500 hover:text-gold transition-colors" href="../index.html#precios">Paquetes</a></li>
-                        <li><a class="text-zinc-500 hover:text-gold transition-colors" href="../index.html#trading">Trading</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-black text-lg mb-6 uppercase tracking-widest">HotMart</h4>
-                    <p class="text-xs text-zinc-500 mb-4">Suscribete a nuestro canal en Hot Mart y aprende más de Trading</p>
-                    <div class="flex gap-2">
-                        <input class="bg-zinc-100 dark:bg-zinc-900 border-none rounded-lg text-sm w-full py-3 px-4 focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Tu email corporativo" type="email"/>
-                        <button class="p-3 bg-primary text-white rounded-lg btn-premium hover:bg-gold"><span class="material-symbols-outlined">send</span></button>
-                    </div>
-                </div>
-            </div>
-            <div class="max-w-[1400px] mx-auto mt-20 pt-10 border-t border-zinc-100 dark:border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
-                <p class="text-xs text-zinc-400 font-medium">© MexTradeBot| MexTradeBot Integration. Todos los derechos reservados.</p>
-                <div class="flex gap-8 text-xs text-zinc-400 font-medium">
-                    <a class="hover:text-zinc-600 dark:hover:text-white transition-colors" href="#">Privacidad</a>
-                    <a class="hover:text-zinc-600 dark:hover:text-white transition-colors" href="#">Términos</a>
-                    <a class="hover:text-zinc-600 dark:hover:text-white transition-colors" href="#">Cookies</a>
-                </div>
-            </div>
-        </footer>
 
         <!-- Simple decorative background elements -->
         <div class="fixed top-20 left-[-10%] w-[30%] h-[30%] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-[-1]"></div>
