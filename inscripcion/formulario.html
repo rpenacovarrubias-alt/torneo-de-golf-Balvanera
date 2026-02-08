@@ -1,74 +1,592 @@
-<!-- PATROCINADORES -->
-<section class="mb-16 border-b-2 border-gray-200 dark:border-gray-700 pb-12" id="patrocinadores">
-  <div class="flex items-center gap-3 mb-8">
-    <div class="h-8 w-1 bg-primary rounded-full"></div>
-    <h2 class="text-2xl font-black">
-      Patrocinadores <a class="text-sm font-bold text-[#638863] dark:text-primary/70 hover:text-primary transition-colors ml-2" href="#patrocinadores">#</a>
-    </h2>
-  </div>
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Registro - Torneo de Golf MTB</title>
 
-  <div class="bg-white dark:bg-white/5 rounded-2xl border border-[#dce5dc] dark:border-white/10 shadow-sm p-8">
-    <p class="text-[#638863] dark:text-primary/70 mb-8 leading-relaxed">
-      Gracias a nuestros patrocinadores por hacer posible el Torneo de Golf Balvanera MTB.
-    </p>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
-    <!-- Sponsor principal -->
-    <div class="rounded-2xl border border-gold/30 bg-gradient-to-r from-gold/10 via-white to-white dark:from-gold/10 dark:via-white/5 dark:to-white/5 p-6 mb-10">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#17cf17",
+            "gold": "#d4af37",
+            "background-light": "#f6f8f6",
+            "background-dark": "#112111",
+            "trading-red": "#cc0000",
+            "mtb-blue": "#2D3E50",
+          },
+          fontFamily: { "display": ["Lexend", "sans-serif"] },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Lexend', sans-serif; }
+    .gold-accent { color: #d4af37; }
+    .border-gold { border-color: #d4af37; }
+    .bg-gold { background-color: #d4af37; }
+
+    /* Toggle Switch Styles */
+    .toggle-switch { position: relative; display: inline-block; width: 60px; height: 34px; }
+    .toggle-switch input { opacity: 0; width: 0; height: 0; }
+    .toggle-slider {
+      position: absolute; cursor: pointer; inset: 0;
+      background-color: #ccc; transition: .4s; border-radius: 34px;
+    }
+    .toggle-slider:before {
+      position: absolute; content: "";
+      height: 26px; width: 26px; left: 4px; bottom: 4px;
+      background-color: white; transition: .4s; border-radius: 50%;
+    }
+    input:checked + .toggle-slider { background-color: #17cf17; }
+    input:checked + .toggle-slider:before { transform: translateX(26px); }
+
+    /* Micro-anim */
+    .btn-premium { transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease; }
+    .btn-premium:hover { transform: translateY(-1px); }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#111811] dark:text-white antialiased">
+  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+
+    <!-- HEADER (manteniendo menú/links) -->
+    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#dce5dc] dark:border-white/10 px-6 py-4 bg-white/90 dark:bg-background-dark/90 backdrop-blur sticky top-0 z-50">
+      <div class="flex items-center gap-4 text-primary">
+        <!-- Logo MTB arriba izquierda (pedido) -->
+        <div class="size-12">
+          <img src="Images/Logo_MTB.png" alt="Logo MTB" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col leading-tight">
+          <h2 class="text-[#111811] dark:text-white text-lg font-black tracking-tight">Torneo de Golf Balvanera MTB</h2>
+          <span class="text-xs text-[#638863] dark:text-primary/70 font-semibold">Registro oficial</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-8">
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="../">Trading</a>
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contacto</a>
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Programa</a>
+        </nav>
+
+        <button class="bg-primary text-[#111811] rounded-lg px-5 py-2 text-sm font-bold hover:opacity-90 transition-opacity">
+          Inicio
+        </button>
+      </div>
+    </header>
+
+    <main class="flex-1 max-w-6xl mx-auto w-full px-6 py-10">
+
+      <!-- HERO / CABECERA -->
+      <section class="mb-10">
+        <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+          <div class="lg:col-span-7">
+            <div class="bg-white dark:bg-white/5 rounded-2xl border border-[#dce5dc] dark:border-white/10 shadow-sm p-8">
+              <div class="flex flex-wrap items-center gap-3 mb-6">
+                <span class="inline-flex items-center gap-2 bg-gold/10 text-gold px-4 py-2 rounded-full border border-gold/20">
+                  <span class="material-symbols-outlined text-sm">workspace_premium</span>
+                  <span class="text-xs font-black uppercase tracking-wider">Save the date</span>
+                </span>
+                <span class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full border border-primary/20">
+                  <span class="material-symbols-outlined text-sm">trophy</span>
+                  <span class="text-xs font-black uppercase tracking-wider">Premios premium</span>
+                </span>
+              </div>
+
+              <h1 class="text-4xl md:text-5xl font-black leading-tight tracking-tight mb-4">
+                Registro al Torneo de Golf<br class="hidden md:block">
+                <span class="gold-accent">Club Balvanera</span>
+              </h1>
+
+              <p class="text-[#638863] dark:text-primary/70 text-lg leading-relaxed mb-6">
+                Participa por premios principales como una <span class="font-bold text-[#111811] dark:text-white">Lincoln Corsair</span>,
+                bono de bienvenida del <span class="font-bold text-[#111811] dark:text-white">100%</span> y acceso a herramientas de trading automatizado.
+              </p>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <!-- XM botón (se deja tal cual: rojo + logo + link) -->
+                <a class="group inline-flex items-center justify-center gap-3 bg-trading-red text-white text-lg font-black py-4 px-6 rounded-2xl text-center hover:opacity-90 transition-all shadow-[0_10px_30px_rgba(204,0,0,0.28)] btn-premium"
+                   href="https://affs.click/g75n5" target="_blank" rel="noopener noreferrer">
+                  <img src="../Images/XM_Boton.jpeg" alt="XM Logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-110"/>
+                  Inscríbete en XM
+                </a>
+
+                <!-- Pago inscripción (con logo MTB) -->
+                <a class="group inline-flex items-center justify-center gap-3 bg-[#2D3E50] text-white text-lg font-black py-4 px-6 rounded-2xl text-center hover:opacity-90 transition-all shadow-[0_10px_30px_rgba(45,62,80,0.25)] btn-premium"
+                   href="https://link.mercadopago.com.mx/torneodegolfmtb" target="_blank" rel="noopener noreferrer">
+                  <img src="Images/Logo_MTB.png" alt="MTB Logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-110"/>
+                  Pago de Inscripción
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card lateral (premios + estética) -->
+          <aside class="lg:col-span-5">
+            <div class="h-full bg-gradient-to-br from-[#0b1220] via-[#0d2433] to-[#0b1220] rounded-2xl border border-white/10 shadow-xl overflow-hidden relative">
+              <div class="absolute inset-0 opacity-25 pointer-events-none"
+                   style="background-image: radial-gradient(circle at 20% 20%, rgba(212,175,55,.55), transparent 40%),
+                          radial-gradient(circle at 80% 30%, rgba(23,207,23,.45), transparent 45%);"></div>
+
+              <div class="p-8 relative">
+                <div class="flex items-center justify-between mb-6">
+                  <h3 class="text-white font-black text-xl tracking-tight">Premios principales</h3>
+                  <span class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-gold bg-white/10 border border-white/10 px-3 py-1 rounded-full">
+                    MTB
+                  </span>
+                </div>
+
+                <ul class="space-y-4 text-white/90">
+                  <li class="flex gap-3">
+                    <span class="material-symbols-outlined text-gold">directions_car</span>
+                    <div>
+                      <p class="font-bold">Lincoln Corsair</p>
+                      <p class="text-sm text-white/70">Premio principal</p>
+                    </div>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="material-symbols-outlined text-primary">savings</span>
+                    <div>
+                      <p class="font-bold">Bono de Bienvenida 100%</p>
+                      <p class="text-sm text-white/70">Hasta 500 USD</p>
+                    </div>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="material-symbols-outlined text-gold">smart_toy</span>
+                    <div>
+                      <p class="font-bold">Conexión + Robot de Trading</p>
+                      <p class="text-sm text-white/70">Configuración premium</p>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="mt-8 pt-6 border-t border-white/10">
+                  <p class="text-xs text-white/60 leading-relaxed">
+                    Tip: completa el registro con calma. Si ya depositaste en XM, asegúrate de marcarlo en el formulario.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- PASOS (mantiene lógica, mejora look) -->
+      <section class="mb-16">
+        <div class="bg-white dark:bg-white/5 p-8 rounded-2xl shadow-sm border border-[#dce5dc] dark:border-white/10">
+          <div class="flex items-center justify-between gap-4 mb-8">
+            <h3 class="text-xl font-black">Pasos para completar tu inscripción</h3>
+            <span class="text-xs font-black uppercase tracking-widest text-[#638863] dark:text-primary/70">
+              5 pasos
+            </span>
+          </div>
+
+          <div class="space-y-8">
+
+            <!-- Paso 1 -->
+            <div class="flex gap-4">
+              <div class="flex-shrink-0">
+                <div class="size-10 rounded-full bg-primary flex items-center justify-center text-white font-black">1</div>
+              </div>
+              <div class="flex-1">
+                <p class="font-black mb-2 text-lg">Regístrate en XM y deposita $1,000 MXN</p>
+                <p class="text-base text-[#638863] dark:text-primary/70 mb-4">
+                  Deposita $1,000 MXN como parte de tu inscripción; serán descontados de la misma.
+                  Usa el código de Partner <span class="font-black text-primary">HDY28</span> y recibe el doble de tu depósito listo para tradear.
+                </p>
+
+                <!-- Botón XM (se deja) -->
+                <a class="group inline-flex items-center justify-center gap-3 bg-trading-red text-white text-lg font-black py-4 px-8 rounded-2xl text-center hover:opacity-90 transition-all shadow-[0_10px_30px_rgba(204,0,0,0.3)] btn-premium"
+                   href="https://affs.click/g75n5" target="_blank" rel="noopener noreferrer">
+                  <img src="../Images/XM_Boton.jpeg" alt="XM Logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-110"/>
+                  Inscríbete
+                </a>
+              </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="flex gap-4">
+              <div class="flex-shrink-0">
+                <div class="size-10 rounded-full bg-background-light dark:bg-white/10 flex items-center justify-center text-[#638863] font-black border-2 border-[#dce5dc] dark:border-white/10">2</div>
+              </div>
+              <div class="flex-1">
+                <p class="font-black mb-2 text-lg">Regresa a llenar el formulario</p>
+                <p class="text-base text-[#638863] dark:text-primary/70">
+                  Cuando tengas tu usuario y hayas realizado el depósito, regresa a esta página de inscripción para completar tu registro.
+                </p>
+              </div>
+            </div>
+
+            <!-- Paso 3 (FORMULARIO: no se alteran campos) -->
+            <div class="flex gap-4">
+              <div class="flex-shrink-0">
+                <div class="size-10 rounded-full bg-background-light dark:bg-white/10 flex items-center justify-center text-[#638863] font-black border-2 border-[#dce5dc] dark:border-white/10">3</div>
+              </div>
+
+              <div class="flex-1">
+                <p class="font-black mb-2 text-lg">Llena el formulario</p>
+                <p class="text-base text-[#638863] dark:text-primary/70 mb-6">
+                  Completa todos los campos del formulario de inscripción con tu información.
+                </p>
+
+                <div class="bg-white dark:bg-white/5 p-6 rounded-2xl border border-[#dce5dc] dark:border-white/10">
+                  <form class="space-y-4">
+                    <div>
+                      <label class="block text-sm font-black mb-2">Nombre Completo</label>
+                      <input type="text" placeholder="Ej. Juan Pérez"
+                             class="w-full rounded-xl border-[#dce5dc] dark:border-white/10 dark:bg-background-dark focus:ring-primary focus:border-primary h-12 px-4">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label class="block text-sm font-black mb-2">WhatsApp</label>
+                        <input type="tel" placeholder="+52 000 000 0000"
+                               class="w-full rounded-xl border-[#dce5dc] dark:border-white/10 dark:bg-background-dark focus:ring-primary focus:border-primary h-12 px-4">
+                      </div>
+                      <div>
+                        <label class="block text-sm font-black mb-2">Email</label>
+                        <input type="email" placeholder="juan@ejemplo.com"
+                               class="w-full rounded-xl border-[#dce5dc] dark:border-white/10 dark:bg-background-dark focus:ring-primary focus:border-primary h-12 px-4">
+                      </div>
+                    </div>
+
+                    <div class="flex items-center justify-between py-4 px-4 bg-gray-50 dark:bg-white/5 rounded-xl border border-[#dce5dc] dark:border-white/10">
+                      <label class="text-sm font-black">Realicé mi depósito en XM</label>
+                      <div class="flex items-center gap-4">
+                        <span class="text-sm text-gray-600 dark:text-gray-400">NO</span>
+                        <label class="toggle-switch">
+                          <input type="checkbox" id="depositToggle">
+                          <span class="toggle-slider"></span>
+                        </label>
+                        <span class="text-sm font-black text-primary">SÍ</span>
+                      </div>
+                    </div>
+
+                    <button type="submit"
+                            class="w-full bg-primary text-white font-black py-3 rounded-xl hover:opacity-90 transition-all btn-premium shadow-lg shadow-primary/20">
+                      Enviar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="flex gap-4">
+              <div class="flex-shrink-0">
+                <div class="size-10 rounded-full bg-background-light dark:bg-white/10 flex items-center justify-center text-[#638863] font-black border-2 border-[#dce5dc] dark:border-white/10">4</div>
+              </div>
+              <div class="flex-1">
+                <p class="font-black mb-2 text-lg">Deposita el resto de tu inscripción ($2,800 MXN)</p>
+                <p class="text-base text-[#638863] dark:text-primary/70 mb-4">
+                  Haz tu depósito por el resto del monto de inscripción ($2,800 MXN) en el link de inscripción
+                  y regresa a esta página. Envía tu comprobante de pago y tu nombre.
+                </p>
+
+                <a class="group inline-flex items-center justify-center gap-3 bg-[#2D3E50] text-white text-lg font-black py-4 px-8 rounded-2xl text-center hover:opacity-90 transition-all shadow-[0_10px_30px_rgba(45,62,80,0.3)] btn-premium"
+                   href="https://link.mercadopago.com.mx/torneodegolfmtb" target="_blank" rel="noopener noreferrer">
+                  <img src="Images/Logo_MTB.png" alt="MTB Logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-110"/>
+                  Pago de Inscripción
+                </a>
+              </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="flex gap-4">
+              <div class="flex-shrink-0">
+                <div class="size-10 rounded-full bg-background-light dark:bg-white/10 flex items-center justify-center text-[#638863] font-black border-2 border-[#dce5dc] dark:border-white/10">5</div>
+              </div>
+              <div class="flex-1">
+                <p class="font-black mb-2 text-lg">¿Te inscribiste en el club?</p>
+                <p class="text-base text-[#638863] dark:text-primary/70">
+                  Si te inscribiste en el club, solo llena el formulario. Nos pondremos en contacto contigo para conectar el robot y empieces a ganar con MexTradeBot.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- (SECCIÓN DE PAQUETES ELIMINADA) -->
+
+      <!-- CONEXIÓN ROBOT (renombrada + botón con velas + link nuevo) -->
+      <section class="mb-16 border-b-2 border-gray-200 dark:border-gray-700 pb-12" id="step-3">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="h-8 w-1 bg-primary rounded-full"></div>
+          <h2 class="text-2xl font-black">Conecta tu cuenta XM a tu Robot Aquí</h2>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 items-stretch">
+          <div class="bg-white dark:bg-zinc-900 p-10 rounded-2xl border border-gray-200 dark:border-zinc-800 shadow-xl">
+            <div class="inline-flex items-center gap-2 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 px-4 py-2 rounded-full mb-6">
+              <span class="w-2 h-2 bg-red-500 rounded-full"></span>
+              <span class="text-red-600 dark:text-red-400 text-xs font-black uppercase tracking-wider">Promoción exclusiva</span>
+            </div>
+
+            <h3 class="text-3xl md:text-4xl font-black mb-6 leading-tight text-[#111811] dark:text-white">
+              Activa tu acceso<br/>al robot de trading
+            </h3>
+
+            <!-- BOTÓN NUEVO: velas japonesas + link nuevo -->
+            <a class="group inline-flex items-center justify-center gap-4 bg-[#2D3E50] hover:bg-[#3d4e60] text-white text-lg font-black py-5 px-10 rounded-2xl transition-all shadow-lg hover:shadow-2xl mb-8 w-full md:w-auto btn-premium"
+               href="https://rpenacovarrubias-alt.github.io/mtb-forms/" target="_blank" rel="noopener noreferrer">
+
+              <!-- Candlestick icon (SVG inline, no archivo externo) -->
+              <span class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-white/10 border border-white/10">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 3v2m0 14v2m10-18v2m0 14v2" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M6 7h2v10H6V7Z" fill="#17cf17"/>
+                  <path d="M16 9h2v6h-2V9Z" fill="#d4af37"/>
+                  <path d="M7 5v2M7 17v2M17 5v4M17 15v4" stroke="white" stroke-width="1.2" stroke-linecap="round" opacity=".75"/>
+                </svg>
+              </span>
+
+              Conectar cuenta XM
+            </a>
+
+            <!-- Beneficios para Jugadores (texto reemplazado EXACTO) -->
+            <div class="border-t border-gray-200 dark:border-zinc-700 pt-8">
+              <h4 class="text-primary text-lg font-black mb-6 flex items-center gap-2">
+                <span class="material-symbols-outlined">featured_play_list</span>
+                Beneficios para Jugadores
+              </h4>
+
+              <div class="space-y-6">
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-black text-lg">1</div>
+                  </div>
+                  <div>
+                    <p class="text-[#111811] dark:text-white text-base">
+                      Depósito de devolución de tu inscripción por <span class="font-black text-primary">$1,000 MXN</span> directamente en tu cuenta.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-black text-lg">2</div>
+                  </div>
+                  <div>
+                    <p class="text-[#111811] dark:text-white text-base">
+                      <span class="font-black italic">Bono de Bienvenida:</span> Duplicamos tu saldo inicial de <span class="font-black">$1,000 MXN</span> a <span class="font-black">$2,000</span> (Hasta 500 USD).
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-black text-lg">3</div>
+                  </div>
+                  <div>
+                    <p class="text-[#111811] dark:text-white text-base">
+                      Acceso exclusivo a la configuración premium de <span class="font-black text-primary">MexTradeBot</span> para trading automatizado.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- DUDAS (se deja) -->
+      <section class="py-12 px-4 border-b-2 border-gray-200 dark:border-gray-700 pb-12" id="contacto">
+        <div class="max-w-[1000px] mx-auto border border-zinc-200 dark:border-zinc-800 rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 shadow-xl">
+          <div class="grid md:grid-cols-2">
+            <div class="p-12 flex flex-col justify-center text-center md:text-left">
+              <h2 class="text-3xl font-black mb-6 font-display">Tienes dudas sobre el Torneo?</h2>
+              <p class="text-zinc-600 dark:text-zinc-400 mb-8 text-lg">Nuestro equipo de soporte está listo para asistirte con cualquier consulta sobre los paquetes, el cronograma o los premios de trading.</p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a class="flex items-center justify-center gap-3 px-10 py-4 bg-primary text-white font-black rounded-xl btn-premium" href="https://wa.me/524421860803" target="_blank">
+                  <span class="material-symbols-outlined">chat</span>
+                  WhatsApp
+                </a>
+                <button onclick="openEmailModal()" class="flex items-center justify-center gap-3 px-10 py-4 border border-zinc-200 dark:border-zinc-700 text-[#111811] dark:text-white font-black rounded-xl btn-premium">
+                  <span class="material-symbols-outlined">mail</span>
+                  Email
+                </button>
+              </div>
+            </div>
+            <div class="bg-cover bg-center min-h-[400px]" style='background-image: url("Images/Lincloln_Suv.jpg");'></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER (se deja tal cual) -->
+    <footer class="bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-900 py-20 px-4 md:px-10">
+      <div class="max-w-[1400px] mx-auto grid md:grid-cols-4 gap-12">
+        <div class="col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="size-10">
+              <img src="Images/Logo_MTB.png" alt="MexTradeBot Logo" class="w-full h-full object-contain"/>
+            </div>
+            <h2 class="text-2xl font-black font-display italic">Torneo de Golf Balvanera MTB</h2>
+          </div>
+          <p class="text-zinc-500 dark:text-zinc-400 text-base max-w-sm leading-relaxed">
+            El evento de golf más importante de la temporada, fusionando la maestría deportiva con las herramientas financieras más avanzadas del mercado.
+          </p>
+          <div class="flex gap-4 mt-8 text-zinc-400">
+            <a class="hover:text-primary transition-colors" href="https://www.google.com/maps/place/Balvanera+Polo+Golf+%26+Country+Club/@20.540511,-100.4722259,17z/data=!3m1!4b1!4m6!3m5!1s0x85d34f7fb62e0e5d:0x5bcbd089a2916658!8m2!3d20.540511!4d-100.469651!16s%2Fg%2F1tdlc1vw?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" title="Ubicación del Torneo"><span class="material-symbols-outlined">location_on</span></a>
+            <a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+            <a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+            <a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+          </div>
+        </div>
+
         <div>
-          <h3 class="text-lg font-black text-[#111811] dark:text-white">Patrocinador principal</h3>
-          <p class="text-sm text-[#638863] dark:text-primary/70">Premio principal: Lincoln Corsair</p>
+          <h4 class="font-black text-lg mb-6 uppercase tracking-widest">Navegación</h4>
+          <ul class="text-sm space-y-3 font-medium">
+            <li><a class="text-zinc-500 hover:text-gold transition-colors" href="../index.html">Inicio</a></li>
+            <li><a class="text-zinc-500 hover:text-gold transition-colors" href="../index.html#cronograma">Cronograma</a></li>
+            <li><a class="text-zinc-500 hover:text-gold transition-colors" href="../index.html#patrocinadores">Patrocinadores</a></li>
+            <li><a class="text-zinc-500 hover:text-gold transition-colors" href="../index.html#premios">Premios</a></li>
+            <li><a class="text-zinc-500 hover:text-gold transition-colors" href="../index.html#precios">Paquetes</a></li>
+            <li><a class="text-zinc-500 hover:text-gold transition-colors" href="../index.html#trading">Trading</a></li>
+          </ul>
         </div>
 
-        <!-- Lincoln (sin logo aún: lo dejamos como “wordmark” elegante + link) -->
-        <a href="https://www.lincoln.mx/" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[#0b1220] text-white font-black tracking-[0.25em] uppercase btn-premium border border-white/10 hover:border-gold/40">
-          LINCOLN
-        </a>
-      </div>
-    </div>
-
-    <!-- Grid de patrocinadores (con logos proporcionados) -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
-      <!-- XM Partners (logo que compartiste en el poster original suele ser XM; aquí usamos tus assets existentes si los tienes en tu proyecto) -->
-      <a href="https://partners.xm.com/" target="_blank" rel="noopener noreferrer"
-         class="group rounded-2xl border border-[#dce5dc] dark:border-white/10 bg-white dark:bg-black/10 p-5 flex items-center justify-center hover:border-primary/40 transition-colors">
-        <img src="../Images/XM_Partners.png" alt="XM Partners" class="h-10 w-auto object-contain opacity-90 group-hover:opacity-100">
-      </a>
-
-      <!-- MexTradeBot (imagen compartida) -->
-      <a href="../" target="_blank" rel="noopener noreferrer"
-         class="group rounded-2xl border border-[#dce5dc] dark:border-white/10 bg-white dark:bg-black/10 p-5 flex items-center justify-center hover:border-primary/40 transition-colors">
-        <img src="https://www.genspark.ai/api/files/s/Ywi8LCqg" alt="MexTradeBot" class="h-12 w-auto object-contain opacity-95 group-hover:opacity-100">
-      </a>
-
-      <!-- Promo Solution (imagen compartida) -->
-      <a href="#" target="_blank" rel="noopener noreferrer"
-         class="group rounded-2xl border border-[#dce5dc] dark:border-white/10 bg-white dark:bg-black/10 p-5 flex items-center justify-center hover:border-primary/40 transition-colors">
-        <img src="https://www.genspark.ai/api/files/s/MkX3q28u" alt="Promo Solution" class="h-10 w-auto object-contain opacity-95 group-hover:opacity-100">
-      </a>
-
-      <!-- Lincoln (link a sitio oficial, mientras conseguimos logo) -->
-      <a href="https://www.lincoln.mx/" target="_blank" rel="noopener noreferrer"
-         class="group rounded-2xl border border-[#dce5dc] dark:border-white/10 bg-white dark:bg-black/10 p-5 flex items-center justify-center hover:border-primary/40 transition-colors">
-        <div class="text-[#111811] dark:text-white font-black tracking-[0.25em] text-sm opacity-80 group-hover:opacity-100">
-          LINCOLN
+        <div>
+          <h4 class="font-black text-lg mb-6 uppercase tracking-widest">HotMart</h4>
+          <p class="text-xs text-zinc-500 mb-4">Suscríbete a nuestro canal en Hot Mart y aprende más de Trading</p>
+          <div class="flex gap-2">
+            <input class="bg-zinc-100 dark:bg-zinc-900 border-none rounded-lg text-sm w-full py-3 px-4 focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Tu email corporativo" type="email"/>
+            <button class="p-3 bg-primary text-white rounded-lg btn-premium hover:bg-gold"><span class="material-symbols-outlined">send</span></button>
+          </div>
         </div>
-      </a>
-    </div>
-
-    <!-- Mosaico adicional de patrocinadores (tu imagen) -->
-    <div class="mt-10">
-      <div class="flex items-center justify-between gap-4 mb-4">
-        <h4 class="text-sm font-black uppercase tracking-widest text-[#638863] dark:text-primary/70">Más patrocinadores</h4>
-        <a class="text-xs font-bold text-primary hover:underline" href="#contacto">¿Quieres ser patrocinador?</a>
       </div>
 
-      <div class="rounded-2xl border border-[#dce5dc] dark:border-white/10 bg-white dark:bg-black/10 p-4 overflow-hidden">
-        <img src="https://www.genspark.ai/api/files/s/HSQEIFa5" alt="Patrocinadores (mosaico)" class="w-full h-auto object-contain">
+      <div class="max-w-[1400px] mx-auto mt-20 pt-10 border-t border-zinc-100 dark:border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-xs text-zinc-400 font-medium"> MexTradeBot| MexTradeBot Integration. Todos los derechos reservados.</p>
+        <div class="flex gap-8 text-xs text-zinc-400 font-medium">
+          <a class="hover:text-zinc-600 dark:hover:text-white transition-colors" href="#">Privacidad</a>
+          <a class="hover:text-zinc-600 dark:hover:text-white transition-colors" href="#">Términos</a>
+          <a class="hover:text-zinc-600 dark:hover:text-white transition-colors" href="#">Cookies</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL EMAIL (se deja tal cual) -->
+    <div id="emailModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[200] hidden items-center justify-center p-4">
+      <div class="bg-white dark:bg-zinc-900 rounded-3xl max-w-lg w-full shadow-2xl border border-zinc-200 dark:border-zinc-800 relative animate-fadeIn">
+        <button onclick="closeEmailModal()" class="absolute top-6 right-6 text-zinc-400 hover:text-zinc-600 dark:hover:text-white transition-colors">
+          <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+
+        <div class="p-10">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary text-2xl">mail</span>
+            </div>
+            <h3 class="text-2xl font-black font-display">Envíanos un mensaje</h3>
+          </div>
+
+          <p class="text-zinc-600 dark:text-zinc-400 mb-8">
+            Completa el formulario y nos pondremos en contacto contigo lo antes posible.
+          </p>
+
+          <form id="contactForm" action="https://formspree.io/f/mvzkwwjr" method="POST" class="space-y-6">
+            <div>
+              <label class="block text-sm font-black text-zinc-700 dark:text-zinc-300 mb-2" for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required
+                     class="w-full px-4 py-3 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-[#111811] dark:text-white"
+                     placeholder="Tu nombre completo" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-black text-zinc-700 dark:text-zinc-300 mb-2" for="email">Email</label>
+              <input type="email" id="email" name="_replyto" required
+                     class="w-full px-4 py-3 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-[#111811] dark:text-white"
+                     placeholder="tu@email.com" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-black text-zinc-700 dark:text-zinc-300 mb-2" for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" required rows="4"
+                        class="w-full px-4 py-3 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none text-[#111811] dark:text-white"
+                        placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde Torneo de Golf Balbanera MTB">
+            <input type="hidden" name="_next" value="#contacto">
+
+            <button type="submit"
+                    class="w-full bg-primary text-white font-black py-4 px-6 rounded-xl btn-premium flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+              <span class="material-symbols-outlined">send</span>
+              Enviar mensaje
+            </button>
+          </form>
+        </div>
       </div>
     </div>
+
+    <script>
+      function openEmailModal() {
+        const modal = document.getElementById('emailModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeEmailModal() {
+        const modal = document.getElementById('emailModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+
+      document.getElementById('emailModal')?.addEventListener('click', function(e) {
+        if (e.target === this) closeEmailModal();
+      });
+
+      document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = this;
+        const formData = new FormData(form);
+
+        fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } })
+          .then(response => {
+            if (response.ok) {
+              alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+              form.reset();
+              closeEmailModal();
+            } else {
+              response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                  alert('Error al enviar el mensaje: ' + data.errors.map(error => error.message).join(', '));
+                } else {
+                  alert('Error al enviar el mensaje. Por favor intenta de nuevo.');
+                }
+              });
+            }
+          })
+          .catch(error => {
+            alert('Error al enviar el mensaje. Por favor intenta de nuevo.');
+            console.error('Error:', error);
+          });
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeEmailModal();
+      });
+    </script>
+
+    <!-- Decor -->
+    <div class="fixed top-20 left-[-10%] w-[30%] h-[30%] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-[-1]"></div>
+    <div class="fixed bottom-10 right-[-10%] w-[40%] h-[40%] bg-gold/5 rounded-full blur-[120px] pointer-events-none z-[-1]"></div>
   </div>
-</section>
-
-
+</body>
+</html>
